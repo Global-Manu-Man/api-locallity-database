@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 04:48 PM
+-- Generation Time: Jul 08, 2023 at 05:19 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -59,14 +59,6 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `id_business`, `image_url`) VALUES
-(30, '03e186f4-d', 'https://locallity.s3.us-west-1.amazonaws.com/1686240674293.jpg'),
-(31, '03e186f4-d', 'https://locallity.s3.us-west-1.amazonaws.com/1686240674332.jpg'),
-(32, '03e186f4-d', 'https://locallity.s3.us-west-1.amazonaws.com/1686240674329.jpg'),
-(33, '03e186f4-d', 'https://locallity.s3.us-west-1.amazonaws.com/1686240674324.jpg'),
-(34, '09acd8e5-5', 'https://locallity.s3.us-west-1.amazonaws.com/1686240736858.jpg'),
-(35, '09acd8e5-5', 'https://locallity.s3.us-west-1.amazonaws.com/1686240736826.jpg'),
-(36, '09acd8e5-5', 'https://locallity.s3.us-west-1.amazonaws.com/1686240736852.jpg'),
-(37, '09acd8e5-5', 'https://locallity.s3.us-west-1.amazonaws.com/1686240736855.jpg'),
 (38, '4a29b557-c', 'https://locallity.s3.us-west-1.amazonaws.com/1686240754744.jpg'),
 (39, '4a29b557-c', 'https://locallity.s3.us-west-1.amazonaws.com/1686240754709.jpg'),
 (40, '4a29b557-c', 'https://locallity.s3.us-west-1.amazonaws.com/1686240754740.jpg'),
@@ -107,9 +99,6 @@ CREATE TABLE `logos` (
 --
 
 INSERT INTO `logos` (`id`, `id_business`, `logo_url`) VALUES
-(8, '03e186f4-d', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686240674337.png'),
-(9, '09acd8e5-5', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686240736861.png'),
-(10, '4a29b557-c', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686240754747.png'),
 (11, '01fa7bfb-9', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686240911775.png'),
 (12, '5d13225c-a', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686243380053.png'),
 (13, '03422eec-e', 'https://locallity-logos.s3.us-west-1.amazonaws.com/1686243433649.png'),
@@ -170,7 +159,6 @@ INSERT INTO `negocio` (`id_business`, `schedule`, `name`, `price`, `manager`, `d
 ('01fa7bfb-9', '6:00 AM-6:00 AM', 'Update data', '12000.00', 'Update item', '', '', '', '', '', '', '', '', 0, 0, 0, 0, '', 0, 0, '', '10', 'municipality', '', '', '', '', '', 0, 0, '', 0, 0, '', '', '2023-06-08 16:15:11', '2023-05-26', '2023-06-30'),
 ('03422eec-e', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:57:13', '2023-05-26', '2023-06-30'),
 ('03e186f4-d', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:11:14', '2023-05-26', '2023-06-30'),
-('09acd8e5-5', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:12:16', '2023-05-26', '2023-06-30'),
 ('3ee633d9-f', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-09 12:40:39', '2023-05-26', '2023-06-30'),
 ('4a29b557-c', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:12:34', '2023-05-26', '2023-06-30'),
 ('5d13225c-a', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', 'undefined', 'undefined', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'undefined', 'undefined', 100, 5, 'policies and terms', 0, 0, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:56:20', '2023-05-26', '2023-06-30'),
