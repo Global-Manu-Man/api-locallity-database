@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2023 at 05:19 PM
+-- Generation Time: Jul 11, 2023 at 04:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -112,14 +112,10 @@ INSERT INTO `logos` (`id`, `id_business`, `logo_url`) VALUES
 
 CREATE TABLE `negocio` (
   `id_business` varchar(11) NOT NULL,
-  `schedule` varchar(100) DEFAULT NULL,
   `name` varchar(100) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
   `manager` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
-  `address_1` varchar(100) DEFAULT NULL,
-  `address_2` varchar(100) DEFAULT NULL,
-  `address_3` varchar(100) DEFAULT NULL,
   `city` varchar(100) DEFAULT NULL,
   `state` varchar(100) DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL,
@@ -131,7 +127,7 @@ CREATE TABLE `negocio` (
   `email` varchar(100) DEFAULT NULL,
   `physical_store` tinyint(1) DEFAULT NULL,
   `online_store` tinyint(1) DEFAULT NULL,
-  `url_google` varchar(100) DEFAULT NULL,
+  `url_google` varchar(250) DEFAULT NULL,
   `business_age` varchar(50) DEFAULT NULL,
   `municipality` varchar(50) DEFAULT NULL,
   `cell_phone_number` varchar(20) DEFAULT NULL,
@@ -139,30 +135,28 @@ CREATE TABLE `negocio` (
   `category` varchar(100) DEFAULT NULL,
   `subcategory` varchar(100) DEFAULT NULL,
   `discount_code` varchar(20) DEFAULT NULL,
-  `publication_likes` int(11) DEFAULT NULL,
   `questions` int(11) DEFAULT NULL,
-  `policies_terms` text DEFAULT NULL,
   `accepts_credit_cards` tinyint(1) DEFAULT NULL,
   `is_owner_verified` tinyint(1) DEFAULT NULL,
   `social_networks` text DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
-  `start_date` date DEFAULT NULL,
-  `end_date` date DEFAULT NULL
+  `start_date` varchar(10) DEFAULT NULL,
+  `end_date` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `negocio`
 --
 
-INSERT INTO `negocio` (`id_business`, `schedule`, `name`, `price`, `manager`, `description`, `address_1`, `address_2`, `address_3`, `city`, `state`, `country`, `postal_code`, `delivery`, `shipping`, `bill`, `antiquity`, `email`, `physical_store`, `online_store`, `url_google`, `business_age`, `municipality`, `cell_phone_number`, `business_days`, `category`, `subcategory`, `discount_code`, `publication_likes`, `questions`, `policies_terms`, `accepts_credit_cards`, `is_owner_verified`, `social_networks`, `status`, `created_at`, `start_date`, `end_date`) VALUES
-('01fa7bfb-9', '6:00 AM-6:00 AM', 'Update data', '12000.00', 'Update item', '', '', '', '', '', '', '', '', 0, 0, 0, 0, '', 0, 0, '', '10', 'municipality', '', '', '', '', '', 0, 0, '', 0, 0, '', '', '2023-06-08 16:15:11', '2023-05-26', '2023-06-30'),
-('03422eec-e', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:57:13', '2023-05-26', '2023-06-30'),
-('03e186f4-d', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:11:14', '2023-05-26', '2023-06-30'),
-('3ee633d9-f', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-09 12:40:39', '2023-05-26', '2023-06-30'),
-('4a29b557-c', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:12:34', '2023-05-26', '2023-06-30'),
-('5d13225c-a', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', 'undefined', 'undefined', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'undefined', 'undefined', 100, 5, 'policies and terms', 0, 0, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:56:20', '2023-05-26', '2023-06-30'),
-('cefe1ea8-1', '6:00 AM-6:00 AM', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Juarez Ave. #123', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 100, 5, 'policies and terms', 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-09 12:41:54', '2023-05-26', '2023-06-30');
+INSERT INTO `negocio` (`id_business`, `name`, `price`, `manager`, `description`, `city`, `state`, `country`, `postal_code`, `delivery`, `shipping`, `bill`, `antiquity`, `email`, `physical_store`, `online_store`, `url_google`, `business_age`, `municipality`, `cell_phone_number`, `business_days`, `category`, `subcategory`, `discount_code`, `questions`, `accepts_credit_cards`, `is_owner_verified`, `social_networks`, `status`, `created_at`, `start_date`, `end_date`) VALUES
+('01fa7bfb-9', 'Update data', '12000.00', 'Update item', '', '', '', '', '', 0, 0, 0, 0, '', 0, 0, '', '10', 'municipality', '', '', '', '', '', 0, 0, 0, '', '', '2023-06-08 16:15:11', '2023-05-26', '2023-06-30'),
+('03422eec-e', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', '', 5, 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:57:13', '2023-05-26', '2023-06-30'),
+('03e186f4-d', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 5, 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:11:14', '2023-05-26', '2023-06-30'),
+('3ee633d9-f', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', '', '', 5, 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-09 12:40:39', '2023-05-26', '2023-06-30'),
+('4a29b557-c', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '1-5', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', 'DESC10', 5, 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:12:34', '2023-05-26', '2023-06-30'),
+('5d13225c-a', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', 'undefined', 'undefined', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'undefined', 'undefined', 5, 0, 0, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-08 16:56:20', '2023-05-26', '2023-06-30'),
+('cefe1ea8-1', 'Muhammad Rafi', '10000.00', 'Muhammad Rafi', 'A place to celebrate in a big way', 'Mexico City', 'Mexico City', 'Mexico ', '4100', 1, 1, 1, 5, 'info@minegocio.com', 1, 1, 'https://goo.gl/maps/vbdhqb5JgeV84Tyr8', '', 'demo', '555-123-4567', 'Lunes a Viernes', 'Categoría', 'Subcategoría', '', 5, 1, 1, 'https://facebook.com/minegocio,https://twitter.com/minegocio,https://instagram.com/minegocio', 'Activo', '2023-06-09 12:41:54', '2023-05-26', '2023-06-30');
 
 --
 -- Indexes for dumped tables
